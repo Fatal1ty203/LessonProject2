@@ -1,5 +1,8 @@
 package lessons.lesson25_binaryTree;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 //K extends Comparable<K> означает, что тип K (например, класс Fruit) будет реализовыывать интерфейс Comparable<K> (Comparable<Fruit>)
 public class MyBinaryTree<K extends Comparable<K>, V> {
 
@@ -21,6 +24,23 @@ public class MyBinaryTree<K extends Comparable<K>, V> {
     public void printDepth(){
         printDepthRecurs(root);
     }
+
+    //Обход в ширину
+    public void printWidth(){
+        if(root == null) return;
+        Queue<Node<K,V>> q = new ArrayDeque<>();
+        q.add(root);
+        while(!q.isEmpty()){
+            Node<K, V> currentNode = q.poll();
+            System.out.println(currentNode.k+" "+currentNode.v);
+            if(currentNode.leftNode!=null)
+                q.add(currentNode.leftNode);
+            if(currentNode.rightNode!=null)
+                q.add(currentNode.rightNode);
+
+        }
+    }
+
 
     private void printDepthRecurs(Node<K,V> currentNode){
         if(currentNode!=null){

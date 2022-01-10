@@ -16,6 +16,10 @@ public class Presidents implements Comparable<Presidents> {
     private String sd1;
     private String sd2;
 
+//    public String getDateFromConsole(){
+//        return sdf.format(startOfTern);
+//    }
+
     public Presidents(String name, Date startOfTern, Date endOfTern) {
         this.name = name;
         this.startOfTern = startOfTern;
