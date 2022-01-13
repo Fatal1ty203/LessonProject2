@@ -7,7 +7,8 @@ public class Calculator {
     private int a = scn.nextInt();
     private int b = scn.nextInt();
 
-    public int sum(){
-        return b + a;
+    public int minus(){
+        if (a>b) return a - b;
+        return b - a;
     }
 }
