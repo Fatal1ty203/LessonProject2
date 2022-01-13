@@ -43,6 +43,10 @@ public class ReflectionService {
 
     private static Method getMethod(Class<?> clazz){
         System.out.println("Пожалуйста введите название метода");
+        Method[] methods = clazz.getDeclaredMethods();
+        for (Method method: methods){
+            System.out.println(method.getName());
+        }
         Method declareMethod = null;
         try {
             declareMethod = clazz.getMethod(scn.nextLine());
