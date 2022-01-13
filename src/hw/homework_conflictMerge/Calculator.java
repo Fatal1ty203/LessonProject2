@@ -1,11 +1,14 @@
 package hw.homework_conflictMerge;
 
-public class Calculator {
-    private int a = 5;
-    private int b = 7;
+import java.util.Scanner;
 
-    public int sum(int a, int b){
-        return a+b;
+public class Calculator {
+    Scanner scn = new Scanner(System.in);
+    private int a = scn.nextInt();
+    private int b = scn.nextInt();
+
+    public int sum(){
+        return b + a;
     }
 
     public int difference(int a, int b){
