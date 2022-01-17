@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Client {
     private int clientNumber = 0;
     private String name;
+    private int fullCost = 0;
     boolean paid = false;
 
     public Client( String name) {
@@ -35,6 +36,14 @@ public class Client {
 
     public void setPaid(boolean paid) {
         this.paid = paid;
+    }
+
+    public void setFullCost(int fullCost) {
+        this.fullCost = fullCost;
+    }
+
+    public int getFullCost() {
+        return fullCost;
     }
 
     public int getClientNumber() {

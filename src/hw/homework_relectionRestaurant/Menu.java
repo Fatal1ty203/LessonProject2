@@ -62,7 +62,7 @@ public class Menu {
                 } catch (InvocationTargetException e) {
                     e.printStackTrace();
                 }
-                System.out.println(menu);
+//                System.out.println(menu);
             }else if (input == 4){
                 methodName = "getPaid";
                 method = rf.getMethod(clazz1, methodName);
@@ -71,13 +71,4 @@ public class Menu {
         }
     }
 
-//    //получаем объект с информацией о нужном класе
-//    Class<?> clazz = Class.forName(className2);
-//    //получаем желаемый метод из данного класса
-//    Method declaredMethod = clazz.getDeclaredMethod(methodName2, int.class, int.class);
-//    //создаем объект этого класса
-//    Object obj = clazz.getDeclaredConstructor().newInstance();
-//
-//    Object result = declaredMethod.invoke(obj, a, b);
-//        System.out.println(result);
 }

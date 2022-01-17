@@ -11,10 +11,12 @@ public class MenuService {
         String name = scn.nextLine();
         menu.put(new Client(name), new Order());
         addDish(name);
+        getClient(name).setPaid(false);
     }
 
     public void addDish(String name){
         System.out.println("Пожалуйста введите название блюда: ");
+        scn.next();
         String dishName = scn.nextLine();
         System.out.println("Введите цену блюда");
         int price = scn.nextInt();
@@ -26,7 +28,7 @@ public class MenuService {
         System.out.println(menu.get(new Client(name)).getDished());
         System.out.println(getClient(name));
         getClient(name).paid = true;
-        System.out.println(menu.get(new Client(name)).getFullCost());
+        System.out.println("Итого: " + getFullCost(name));
         deleteOrder(name);
     }
 
@@ -48,6 +50,16 @@ public class MenuService {
             }
         }
         return client ;
+    }
+
+    private int getFullCost(String name){
+        int result = 0;
+        for (Map.Entry<Client, Order> map : menu.entrySet()){
+            for (Dish dish : map.getValue().getDished()){
+                result += dish.getPrice();
+            }
+        }
+        return result;
     }
 
     public Set<Client> getPaid(){
