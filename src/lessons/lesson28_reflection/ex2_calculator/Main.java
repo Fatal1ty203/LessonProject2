@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        String className = "lessons.lesson28_reflection.ex2_calculator.Calculator";
+        String className = "lessons.lesson28_reflection.ex2_calculator.CalculatorTest";
         String className2 = "lessons.lesson28_reflection.ex2_calculator.Calculator2";
         String methodName = "sum";
         String methodName2 = "minus";

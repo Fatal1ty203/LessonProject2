@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 
 public class Main {
     public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
-        //- Создать класс Calculator с методами сложения, разницы и создать сервисный метод start,
+        //- Создать класс CalculatorTest с методами сложения, разницы и создать сервисный метод start,
         // который запускает консольное меню калькулятора.
         // Пометить данный метод аннотацией ServiceMethod.
         // В мейне запустить метод средствами reflection.

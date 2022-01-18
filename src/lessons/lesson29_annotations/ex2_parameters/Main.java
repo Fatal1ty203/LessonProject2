@@ -33,11 +33,11 @@ public class Main {
         // поэтому необходимо создать в аннотации ServiceOrder параметр order со значением по умолчанию 0.
         //В мейне с помощью reflection запустить методы в порядке возрастания.
 
-        File file = new File("C:\\Users\\DELL\\OneDrive\\Рабочий стол\\hz-main\\LessonProject2\\src\\lessons\\lesson29_annotations\\ex1_basic\\Calculator.java");
+        File file = new File("C:\\Users\\DELL\\OneDrive\\Рабочий стол\\hz-main\\LessonProject2\\src\\lessons\\lesson29_annotations\\ex1_basic\\CalculatorTest.java");
         File folder = new File("C:\\Users\\DELL\\OneDrive\\Рабочий стол\\hz-main\\LessonProject2\\src\\lessons\\lesson29_annotations\\e2_parameters");
         Date date = new Date(file.lastModified());
         //System.out.println(date);
-        Files.move(Paths.get("C:\\Users\\DELL\\OneDrive\\Рабочий стол\\hz-main\\LessonProject2\\src\\lessons\\lesson29_annotations\\ex1_basic\\Calculator.java"),
+        Files.move(Paths.get("C:\\Users\\DELL\\OneDrive\\Рабочий стол\\hz-main\\LessonProject2\\src\\lessons\\lesson29_annotations\\ex1_basic\\CalculatorTest.java"),
                 Paths.get("C:\\Users\\DELL\\OneDrive\\Рабочий стол\\hz-main\\LessonProject2\\src\\lessons\\lesson29_annotations\\ex2_parameters\\test.txt"));
 
 

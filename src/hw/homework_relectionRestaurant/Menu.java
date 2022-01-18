@@ -62,7 +62,6 @@ public class Menu {
                 } catch (InvocationTargetException e) {
                     e.printStackTrace();
                 }
-//                System.out.println(menu);
             }else if (input == 4){
                 methodName = "getPaid";
                 method = rf.getMethod(clazz1, methodName);
