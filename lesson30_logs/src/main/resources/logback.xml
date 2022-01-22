@@ -1,4 +1,4 @@
-<configuration>
+<configuration >
 
     <appender name="myConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
         <!-- encoders are assigned the type
@@ -8,7 +8,63 @@
         </encoder>
     </appender>
 
-    <root level="info">
+
+    <appender  name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>lesson30_logs/testFile.log</file>
+<!--        append true значит, что новые логин будут добавляться в файл к старым-->
+        <append>false</append>
+        <!-- set immediateFlush to false for much higher logging throughput -->
+<!--        immediateFlush true значит, что как только вызвана команда лога, лог сразу попадает в файл-->
+        <immediateFlush>true</immediateFlush>
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{dd.MM.yyyy HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ROLLING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>lesson30_logs/rolling_File.log</file>
+        <append>false</append>
+
+        <!--        immediateFlush true значит, что как только вызвана команда лога, лог сразу попадает в файл-->
+        <immediateFlush>true</immediateFlush>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>lesson30_logs/logFile.%d{yyyy-MM-dd_HH-mm}.log</fileNamePattern>
+
+            <!-- keep 30 days' worth of history capped at 3GB total size -->
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>3GB</totalSizeCap>
+
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{dd.MM.yyyy HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--    Это мы создали отдельный конфиг лога в названием ex1.Calculator, при использовании которого логи будут писаться в файл от уровня debug-->
+    <logger level="debug" name="ex1.Calculator">
+        <appender-ref ref="FILE" />
+    </logger>
+    <!--    Это мы создали отдельный конфиг лога в названием ex1.Main, при использовании которого логи будут писаться в консоль от уровня info-->
+    <logger level="info" name="ex1.Main">
         <appender-ref ref="myConsoleAppender" />
+    </logger>
+
+<!--    Данный аппендер будет распространяться на все файлы из пакета ex2-->
+    <logger level="debug" name="ex2_rolling_file">
+        <appender-ref ref="ROLLING_FILE" />
+        <appender-ref ref="myConsoleAppender" />
+    </logger>
+
+
+
+
+
+    <root level="debug">
+<!--        <appender-ref ref="myConsoleAppender" />-->
+<!--        <appender-ref ref="FILE" />-->
     </root>
 </configuration>
