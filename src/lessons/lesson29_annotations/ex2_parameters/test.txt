@@ -1,0 +1,21 @@
+package lessons.lesson29_annotations.ex1_basic;
+
+
+public class ex1.Calculator {
+
+
+    public int sum(int a, int b){
+        return a+b;
+    }
+    public int minus(int a, int b){
+        return a-b;
+    }
+    @ServiceMethod
+    public void start(){
+        System.out.println("1. sum");
+        System.out.println("2. minus");
+        //дальше можно дописать чтение с консоли пунктов меню и вызов нужного метода
+    }
+
+
+}

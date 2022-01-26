@@ -1,0 +1,29 @@
+<configuration>
+
+    <appender name="myConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender  name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>homework_telephone_conversation\infoLog</file>
+        <!--        append true значит, что новые логин будут добавляться в файл к старым-->
+        <append>false</append>
+        <!-- set immediateFlush to false for much higher logging throughput -->
+        <!--        immediateFlush true значит, что как только вызвана команда лога, лог сразу попадает в файл-->
+        <immediateFlush>true</immediateFlush>
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{dd.MM.yyyy HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="myConsoleAppender" />
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>
