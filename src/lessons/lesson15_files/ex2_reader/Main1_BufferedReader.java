@@ -3,7 +3,7 @@ package lessons.lesson15_files.ex2_reader;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class Main1_FileReader {
+public class Main1_BufferedReader {
     public static void main(String[] args) {
         //Считать данные из файла
         String absoluteFilePath  = "C:\\Users\\DELL\\OneDrive\\Рабочий стол\\hz-main\\LessonProject\\src\\lessons.lesson15_files\\data.txt";
