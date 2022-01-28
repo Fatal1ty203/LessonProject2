@@ -1,2 +1,1 @@
-26.01.2022 21:50:21 [main] INFO  tellService.TellService - Нео звонит абоненту: Морфиус
-26.01.2022 21:50:25 [main] INFO  tellService.TellService - Морфиус принимает звонок от абонента Нео
+28.01.2022 19:12:14 [main] INFO  task.tellService.TellService - Нео звонит абоненту: Морфиус

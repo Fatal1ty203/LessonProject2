@@ -1,10 +1,8 @@
-package speaker;
+package task.speaker;
 
-import abonent.Abonent;
-import com.sun.tools.javac.Main;
+import task.abonent.Abonent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import tellService.TellService;
 
 import java.util.Scanner;
 

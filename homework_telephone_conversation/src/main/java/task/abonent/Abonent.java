@@ -1,4 +1,4 @@
-package abonent;
+package task.abonent;
 
 public class Abonent {
     private String name;

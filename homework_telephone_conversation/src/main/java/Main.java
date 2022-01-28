@@ -1,5 +1,5 @@
-import abonent.Abonent;
-import tellService.TellService;
+import task.abonent.Abonent;
+import task.tellService.TellService;
 
 public class Main {
     public static void main(String[] args) {

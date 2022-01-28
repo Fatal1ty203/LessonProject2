@@ -1,9 +1,8 @@
-package tellService;
+package task.tellService;
 
-import abonent.Abonent;
+import task.abonent.Abonent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import speaker.Speaker;
 
 import java.util.Scanner;
 
