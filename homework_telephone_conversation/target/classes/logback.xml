@@ -22,8 +22,18 @@
         </encoder>
     </appender>
 
-    <root level="info">
+    <!--    Это мы создали отдельный конфиг лога в пакете task,
+   при использовании которого логи будут писаться в консоль от уровня info-->
+    <logger level="info" name="task">
         <appender-ref ref="myConsoleAppender" />
+    </logger>
+    <!--    Это мы создали отдельный конфиг лога в пакете task,
+     при использовании которого логи будут писаться в файл от уровня debug-->
+    <logger level="debug" name="task">
         <appender-ref ref="FILE" />
+    </logger>
+
+    <root level="info">
+<!--        <appender-ref ref="FILE" />-->
     </root>
 </configuration>

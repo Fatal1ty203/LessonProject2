@@ -1,1 +1,21 @@
-28.01.2022 19:12:14 [main] INFO  task.tellService.TellService - Нео звонит абоненту: Морфиус
+30.01.2022 16:35:57 [main] INFO  task.tellService.TellService - Нео звонит абоненту: Морфиус
+30.01.2022 16:35:57 [main] DEBUG task.tellService.TellService - 1. ответить на звонк
+2. сбросить вызов
+30.01.2022 16:35:59 [main] WARN  task.tellService.TellService - Было нажато: 1
+30.01.2022 16:35:59 [main] INFO  task.tellService.TellService - Морфиус принимает звонок от абонента Нео
+30.01.2022 16:35:59 [main] INFO  task.tellService.TellService - Нео: 
+30.01.2022 16:36:03 [main] INFO  task.tellService.TellService - Нео: Привет
+30.01.2022 16:36:03 [main] DEBUG task.tellService.TellService - Abonent{name='Нео', number=2351}: Привет
+
+30.01.2022 16:36:03 [main] INFO  task.tellService.TellService - Морфиус: 
+30.01.2022 16:36:06 [main] INFO  task.tellService.TellService - Морфиус: как дела 
+30.01.2022 16:36:06 [main] DEBUG task.tellService.TellService - Abonent{name='Морфиус', number=4444555}: как дела 
+
+30.01.2022 16:36:06 [main] INFO  task.tellService.TellService - Нео: 
+30.01.2022 16:36:08 [main] INFO  task.tellService.TellService - Нео: норм
+30.01.2022 16:36:08 [main] DEBUG task.tellService.TellService - Abonent{name='Нео', number=2351}: норм
+
+30.01.2022 16:36:08 [main] INFO  task.tellService.TellService - Морфиус: 
+30.01.2022 16:36:09 [main] INFO  task.tellService.TellService - Морфиус: 
+30.01.2022 16:36:09 [main] DEBUG task.tellService.TellService - Abonent{name='Морфиус', number=4444555}: 
+

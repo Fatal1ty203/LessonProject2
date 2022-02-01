@@ -67,6 +67,7 @@
 
     <root level="debug">
 <!--        <appender-ref ref="myConsoleAppender" />-->
+<!--        <appender-ref ref="ex1.Calculator" />-->
 <!--        <appender-ref ref="FILE" />-->
     </root>
 </configuration>
