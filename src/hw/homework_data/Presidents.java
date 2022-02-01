@@ -11,8 +11,6 @@ public class Presidents implements Comparable<Presidents> {
     private Date endOfTern;
     private String sDate1 ;
     private String sDate2 ;
-    private SimpleDateFormat sdf= new SimpleDateFormat("dd.MMMM.yyyy");
-    private SimpleDateFormat sdp = new SimpleDateFormat("dd.MM.yyyy");
     private String sd1;
     private String sd2;
 
@@ -24,8 +22,10 @@ public class Presidents implements Comparable<Presidents> {
         this.name = name;
         this.startOfTern = startOfTern;
         this.endOfTern = endOfTern;
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MMMM.yyyy");
         this.sDate1 = sdf.format(startOfTern);
         this.sDate2 = sdf.format(endOfTern);
+        SimpleDateFormat sdp = new SimpleDateFormat("dd.MM.yyyy");
         this.sd1 = sdp.format(startOfTern);
         this.sd2 = sdp.format(endOfTern);
     }

@@ -6,8 +6,6 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Menu {
-    private static String clazzName = null;
-    private static String methodName = null;
     private static Class<?> clazz1 = null;
     private static Method method = null;
     private static Object obj = null;
@@ -22,11 +20,12 @@ public class Menu {
                     "3. Расчитать клиента (выводится чек и заказ удаляется из системы)\n" +
                     "4. Вывести всех нерасчитанных клиентов (выводятся имя и номер клиентов, которые еще не рассчитались)");
             input = scn.nextInt();
+            String methodName = null;
             if (input == 1){
-                clazzName = "hw.homework_relectionRestaurant.MenuService";
+                String clazzName = "hw.homework_relectionRestaurant.MenuService";
                 clazz1 = rf.getClazz(clazzName);
                 methodName = "createOrder";
-                method = rf.getMethod(clazz1,methodName);
+                method = rf.getMethod(clazz1, methodName);
                 obj = rf.getObject(clazz1);
                 rf.methodResult(method,obj);
             } else if (input == 2){

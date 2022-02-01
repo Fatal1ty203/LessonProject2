@@ -5,9 +5,6 @@ import hw.homework8.RPG.Character.Class.Character;
 
 public class Mage extends Character {
 
-    private String specialName = "Ледяная хватка";
-    private String basicName = "Ледяное копье";
-
     public Mage(int physicalProtection, int magicProtection) {
         super(physicalProtection, magicProtection);
     }
@@ -31,10 +28,12 @@ public class Mage extends Character {
     }
 
     public String getSpecialName() {
+        String specialName = "Ледяная хватка";
         return specialName;
     }
 
     public String getBasicName() {
+        String basicName = "Ледяное копье";
         return basicName;
     }
 

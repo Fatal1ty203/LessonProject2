@@ -3,8 +3,6 @@ package hw.homework8.RPG.Character.Class.Heals;
 import hw.homework8.RPG.Character.Class.Character;
 
 public class Heal extends Character {
-    private String specialName = "Колодец Света";
-    private String basicName = "Неистовство ветра";
 
     public Heal(int physicalProtection, int magicProtection) {
         super(physicalProtection, magicProtection);
@@ -30,10 +28,12 @@ public class Heal extends Character {
 
 
     public String getSpecialName() {
+        String specialName = "Колодец Света";
         return specialName;
     }
 
     public String getBasicName() {
+        String basicName = "Неистовство ветра";
         return basicName;
     }
 

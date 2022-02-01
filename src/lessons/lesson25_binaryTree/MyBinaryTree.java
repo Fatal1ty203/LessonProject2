@@ -99,7 +99,7 @@ public class MyBinaryTree<K extends Comparable<K>, V> {
     }
 
 
-    public class Node<K, V> {
+    public static class Node<K, V> {
         public K k;
         public V v;
         public Node<K, V> leftNode;
