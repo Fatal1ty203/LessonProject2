@@ -79,7 +79,7 @@ class ServiceTest {
     }
 
     @Test
-    void testGetClientList(){
+    void testGetClientList_Regular(){
         service.addClient(client);
         service.addDish(client,dish);
         System.out.println(service.getClientList().get(0).isPay());

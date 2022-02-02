@@ -3,8 +3,7 @@ package lessons.lesson35_junit_test.ex2_student;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.function.Executable;
 
 class StudentTest {
     Student student = new Student(); //данный объект будет создаваться перед началом каждого теста
@@ -49,8 +48,19 @@ class StudentTest {
 
     //Провестировать успешное получение знчения, а также выход за границы списка (что вылезет ошибка)
     @Test
-    void get() {
+    void testGetRegular() {
+        Subject subject = new Subject("Fizra)", 5);
+        student.add(subject);
+        Assertions.assertEquals(subject,student.get(0));
+    }
 
+    @Test
+    void testGet_SubjectIndexOutOfBoundsException(){
+        Subject subject = new Subject("Matan", 4);
+        int size = student.size();
+        student.add(subject);
+        Assertions.assertEquals(size+1,student.size());
+        Assertions.assertThrows(IndexOutOfBoundsException.class, ()-> student.get(2));
     }
 
     @Test
@@ -66,6 +76,5 @@ class StudentTest {
         Assertions.assertEquals(4.5, student.getAverageMark());
 
     }
-
 
 }

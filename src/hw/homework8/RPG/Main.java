@@ -2,6 +2,7 @@ package hw.homework8.RPG;
 
 
 import hw.homework8.RPG.Character.Class.Character;
+import hw.homework8.RPG.Character.Class.ChekPoint.CharactersListForSave;
 import hw.homework8.RPG.Character.Class.ChekPoint.ChekPoint;
 import hw.homework8.RPG.Character.Class.FightService.Fight;
 import hw.homework8.RPG.Character.Class.Heals.Senjin;
@@ -12,6 +13,7 @@ import hw.homework8.RPG.Character.Class.Warriors.ThunderHellscream;
 import hw.homework8.RPG.Character.Class.Warriors.VarianWrynn;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
@@ -23,19 +25,20 @@ public class Main {
         VarianWrynn varianWrynn = new VarianWrynn(100,30);
         ThunderHellscream thunderHellscream = new ThunderHellscream(100,70);
 
-        List<Character> characters = new ArrayList<>();
-        characters.add(senjin);
-        characters.add(velen);
-        characters.add(antonidas);
-        characters.add(jainaProudmoore);
-        characters.add(varianWrynn);
-        characters.add(thunderHellscream);
-        characters = ChekPoint.loads(characters);
+        CharactersListForSave characters = new CharactersListForSave();
+        List<Character> characterList;
+        characterList = ChekPoint.load();
+        characters.getCharacters().add(senjin);
+        characters.getCharacters().add(velen);
+        characters.getCharacters().add(antonidas);
+        characters.getCharacters().add(jainaProudmoore);
+        characters.getCharacters().add(varianWrynn);
+        characters.getCharacters().add(thunderHellscream);
         Fight fight = new Fight();
-        fight.fight(characters.get(5), fight.target(characters));
+        System.out.println(characterList.get(1).getName());
+        System.out.println(characterList.get(1).getHealth());
+        fight.fight(characters.getCharacters().get(5), fight.target(characterList));
 
-
-
-        ChekPoint.saves(characters);
+        ChekPoint.saves(characterList);
     }
 }

@@ -1,7 +1,5 @@
 package hw.homework_Restaurant_Terminal;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -10,7 +8,7 @@ public class Main {
         Scanner scn = new Scanner(System.in);
         Service service = new Service();
         int input = 0;
-        while (input != 5){
+        while (input != 5) {
             System.out.println("1. Добавить блюдо в заказ клиенту (если клиент еще не делал заказ, " +
                     "он вводит только свое имя, баланс и желаемое блюдо. " +
                     "В этом случае нужно создать объект Client с новым уникальным номером. " +
@@ -20,42 +18,42 @@ public class Main {
                     "3. Расчитать клиента (клиент вводит свой номер, выводится чек и заказ удаляется из системы)\n" +
                     "4. Вывести всех нерасчитанных клиентов (выводятся имя и номер клиентов, которые еще не рассчитались)");
             input = scn.nextInt();
-            if (input == 1){
+            if (input == 1) {
                 System.out.println("Введите Ваше имя: ");
                 String name = scn.next();
-                if (service.getClient(name)){
+                if (service.getClient(name)) {
                     System.out.println("Введите название блюда: ");
                     String nameDish = scn.nextLine();
                     System.out.println("Введите цену блюда: ");
                     double dishPrice = scn.nextDouble();
                     Dish dish = new Dish(nameDish, dishPrice);
-                    service.addDish(service.getClientForName(name),dish);
-                }else {
+                    service.addDish(service.getClientForName(name), dish);
+                } else {
                     System.out.println("Введите Ваш баланс: ");
                     double balance = scn.nextDouble();
                     scn.nextLine();
-                    Client client = new Client(name,balance);
+                    Client client = new Client(name, balance);
                     service.addClient(client);
                     System.out.println("Введите название блюда: ");
                     String nameDish = scn.nextLine();
                     System.out.println("Введите цену блюда: ");
                     double dishPrice = scn.nextDouble();
-                    Dish dish = new Dish(nameDish,dishPrice);
-                    service.addDish(client,dish);
+                    Dish dish = new Dish(nameDish, dishPrice);
+                    service.addDish(client, dish);
                 }
-            }else if (input == 2){
+            } else if (input == 2) {
                 System.out.println("Введите Ваш номер: ");
                 int number = scn.nextInt();
                 System.out.println(service.getTotalPrice(service.getClientForID(number)));
-            }else if (input == 3){
+            } else if (input == 3) {
                 System.out.println("Введите Ваш номер: ");
                 int number = scn.nextInt();
                 System.out.println(service.getClientForID(number).getNumber());
                 System.out.println(service.makeBill(service.getClientForID(number)));
-            }else if (input == 4){
+            } else if (input == 4) {
                 LinkedList<Client> clients = service.getClientList();
-                for (Client client : clients){
-                    if (!client.isPay()){
+                for (Client client : clients) {
+                    if (!client.isPay()) {
                         System.out.println(client);
                     }
                 }

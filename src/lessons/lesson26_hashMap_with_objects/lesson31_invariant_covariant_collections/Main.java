@@ -1,4 +1,4 @@
-package lessons.lesson31_invariant_covariant_collections;
+package lessons.lesson26_hashMap_with_objects.lesson31_invariant_covariant_collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;

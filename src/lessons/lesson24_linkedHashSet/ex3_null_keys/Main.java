@@ -1,4 +1,4 @@
-package lessons.lesson26_hashMap_with_objects.ex3_null_keys;
+package lessons.lesson24_linkedHashSet.ex3_null_keys;
 
 import java.util.HashMap;
 

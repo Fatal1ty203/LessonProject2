@@ -1,6 +1,8 @@
 package hw.homework8.RPG.Character.Class;
 
-abstract public class Character {
+import java.io.Serializable;
+
+abstract public class Character implements Serializable {
     private String name;
     private int lvl,damage,cooldownAD, cooldownAP;
     private int health, physicalProtection, magicProtection, id;
