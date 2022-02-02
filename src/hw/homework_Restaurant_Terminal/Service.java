@@ -65,6 +65,14 @@ public class Service {
         return dishes;
     }
 
+    public LinkedList<Client> getClientList(){
+        LinkedList<Client> clients = new LinkedList<>();
+        for (Map.Entry<Client, List<Dish>> map : orders.entrySet()){
+            clients.add(map.getKey());
+        }
+        return clients;
+    }
+
     public String makeBill(Client client){
         Client client1 = getClient(client);
         client1.setBalance(client.getBalance() - getTotalPrice(client));

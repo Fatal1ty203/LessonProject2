@@ -1,5 +1,8 @@
 package hw.homework_Restaurant_Terminal;
 
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Main {
@@ -49,6 +52,13 @@ public class Main {
                 int number = scn.nextInt();
                 System.out.println(service.getClientForID(number).getNumber());
                 System.out.println(service.makeBill(service.getClientForID(number)));
+            }else if (input == 4){
+                LinkedList<Client> clients = service.getClientList();
+                for (Client client : clients){
+                    if (!client.isPay()){
+                        System.out.println(client);
+                    }
+                }
             }
         }
     }

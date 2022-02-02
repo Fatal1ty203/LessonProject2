@@ -78,4 +78,11 @@ class ServiceTest {
         Assertions.assertEquals(null,service.getClientForID(2));
     }
 
+    @Test
+    void testGetClientList(){
+        service.addClient(client);
+        service.addDish(client,dish);
+        System.out.println(service.getClientList().get(0).isPay());
+    }
+
 }
