@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
+        Service service = new Service();
         int input = 0;
         while (input != 5){
-            Service service = new Service();
             System.out.println("1. Добавить блюдо в заказ клиенту (если клиент еще не делал заказ, " +
                     "он вводит только свое имя, баланс и желаемое блюдо. " +
                     "В этом случае нужно создать объект Client с новым уникальным номером. " +

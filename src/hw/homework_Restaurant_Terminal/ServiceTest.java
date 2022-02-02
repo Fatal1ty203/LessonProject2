@@ -15,6 +15,7 @@ class ServiceTest {
         int expected = 1;
         int actual = service.getCounterClients();
         Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected,client.getNumber());
     }
 
     @Test
@@ -49,6 +50,8 @@ class ServiceTest {
         service.addClient(client);
         service.addDish(client,dish);
         System.out.println(service.makeBill(client));
+        System.out.println(service.getClientForID(1).getBalance());
+        Assertions.assertEquals(150,service.getClientForID(1).getBalance(),0.1);
     }
 
     @Test
@@ -60,6 +63,18 @@ class ServiceTest {
     @Test
     void testGetClient_False(){
         Assertions.assertEquals(false,service.getClient("c1"));
+    }
+
+    @Test
+    void testGetClient_ID(){
+        service.addClient(client);
+        service.addDish(client,dish);
+        System.out.println(service.getClientForID(1).getName());
+    }
+
+    @Test
+    void testGetClientForIDReturnNULL(){
+        Assertions.assertEquals(null,service.getClientForID(2));
     }
 
 }

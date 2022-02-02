@@ -47,6 +47,14 @@ public class Service {
         return result;
     }
 
+    private void deletedDish(Client client){
+        for (Map.Entry<Client, List<Dish>> map : orders.entrySet()){
+            if (map.getKey().equals(client)){
+                map.setValue(null);
+            }
+        }
+    }
+
     private List<Dish> getDishList(Client client){
         List<Dish> dishes = null;
         for (Map.Entry<Client, List<Dish>> map : orders.entrySet()) {
@@ -69,6 +77,7 @@ public class Service {
             }
             s += "Итого: " + getTotalPrice(client) + "\n";
             s +="Имя клиента: " + client1.getName();
+            deletedDish(client);
         }
         return s;
     }
