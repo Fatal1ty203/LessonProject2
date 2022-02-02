@@ -52,6 +52,7 @@ class ServiceTest {
         System.out.println(service.makeBill(client));
         System.out.println(service.getClientForID(1).getBalance());
         Assertions.assertEquals(150,service.getClientForID(1).getBalance(),0.1);
+        Assertions.assertEquals(true,service.getClientForID(1).isPay());
     }
 
     @Test

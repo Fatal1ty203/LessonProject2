@@ -78,6 +78,7 @@ public class Service {
             s += "Итого: " + getTotalPrice(client) + "\n";
             s +="Имя клиента: " + client1.getName();
             deletedDish(client);
+            getClient(client).setPay(true);
         }
         return s;
     }

@@ -7,11 +7,13 @@ public class Client {
     private double balance;
     private int number;
     private static int ID;
+    private boolean pay;
 
     public Client(String name, double balance) {
         this.name = name;
         this.balance = balance;
         this.number = createNumber();
+        this.pay = false;
     }
 
     public String getName() {
@@ -32,6 +34,14 @@ public class Client {
 
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+
+    public boolean isPay() {
+        return pay;
+    }
+
+    public void setPay(boolean pay) {
+        this.pay = pay;
     }
 
     @Override
