@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="lesson30_logs" />
         <module name="homework_telephone_conversation" />
+        <module name="Tic_Tac" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="homework_telephone_conversation" target="16" />
       <module name="lesson30_logs" target="16" />
+      <module name="Tic_Tac" target="16" />
       <module name="untitled" target="16" />
     </bytecodeTargetLevel>
   </component>
