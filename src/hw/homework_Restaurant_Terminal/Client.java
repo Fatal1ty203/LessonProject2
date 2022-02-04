@@ -16,6 +16,10 @@ public class Client {
         this.pay = false;
     }
 
+    public static void clearStaticId(){
+        ID = 0;
+    }
+
     public String getName() {
         return name;
     }

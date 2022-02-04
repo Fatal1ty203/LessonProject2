@@ -9,6 +9,11 @@ class ServiceTest {
     Client client = new Client("c1",200);
     Dish dish = new Dish("d1", 50);
 
+    @BeforeEach
+    void clearStaticId(){
+        Client.clearStaticId();
+    }
+
     @Test
     void testAddNewClient() {
         service.addClient(client);
@@ -19,12 +24,12 @@ class ServiceTest {
     }
 
     @Test
-    void testSubjectClientNullException(){
+    void testClientNullException(){
         Assertions.assertThrows(ClientNullException.class, ()-> service.addDish(client,dish));
     }
 
     @Test
-    void testSubjectDishisNullException(){
+    void testDishisNullException(){
         service.addClient(client);
         Assertions.assertThrows(DishisNullException.class,()-> service.addDish(client,null));
     }
