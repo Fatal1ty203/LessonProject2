@@ -8,6 +8,9 @@ public class Main {
 
         List<Integer> ints = List.of(10, 20, 30);
         System.out.println(sum(ints));
+        List<Double> doubles = List.of(2.5d, 4d, 3.5d);
+        System.out.println(sum(doubles));
+
 
 
     }

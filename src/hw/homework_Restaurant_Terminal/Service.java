@@ -24,11 +24,13 @@ public class Service {
         } else {
             for (Map.Entry<Client,List<Dish>> map : orders.entrySet()){
                 if (map.getKey().equals(client)){
+                    getClient(client).setPay(false);
                     if (map.getValue()==null){
                         map.setValue(new LinkedList<>());
                         map.getValue().add(dish);
                     }else {
                         map.getValue().add(dish);
+
                     }
                 }
             }

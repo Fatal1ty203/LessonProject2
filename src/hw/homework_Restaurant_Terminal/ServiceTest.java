@@ -79,10 +79,19 @@ class ServiceTest {
     }
 
     @Test
-    void testGetClientList_Regular(){
+    void testGetClientList_Regular_return_false(){
         service.addClient(client);
         service.addDish(client,dish);
-        System.out.println(service.getClientList().get(0).isPay());
+        Assertions.assertEquals(false,service.getClientList().get(0).isPay());
+    }
+    @Test
+    void testGetClientList_Regular_return_true_AND_addDish_return_false(){
+        service.addClient(client);
+        service.addDish(client,dish);
+        service.makeBill(client);
+        Assertions.assertEquals(true,service.getClientList().get(0).isPay());
+        service.addDish(client,dish);
+        Assertions.assertEquals(false,service.getClientForID(1).isPay());
     }
 
 }
