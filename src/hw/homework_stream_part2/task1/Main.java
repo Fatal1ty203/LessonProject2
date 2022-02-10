@@ -23,7 +23,7 @@ public class Main {
             scn.nextLine();
             if (input==1){
                 String authorName = scn.nextLine();
-                List<String> stringList = bookStream.stream().filter(val -> val.getAuthorName().equalsIgnoreCase(authorName)).map(val -> val.getBookName()).collect(Collectors.toList());
+                List<String> stringList = bookStream.stream().filter(val -> val.getAuthorName().equalsIgnoreCase(authorName)).map(Book::getBookName).collect(Collectors.toList());
                 System.out.println(stringList);
             }
         }
