@@ -1,5 +1,6 @@
 package hw.homework_NIO2.task1;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
@@ -43,20 +44,34 @@ public class Main {
         finedFiles(pathSrc, list);
 
         for (Path st : list){
-            File file = new File(String.valueOf(pathDir), st.toString());
+//            File file = new File(String.valueOf(pathDir), st.toString());
             String pSrc = pathSrc.toString() +"\\" + st;
             String pDir = pathDir.toString() +"\\" + "copyOf" + st;
             System.out.println(pSrc +" " + pDir);
             Files.copy(Path.of(pSrc), Path.of(pDir), StandardCopyOption.REPLACE_EXISTING);
         }
 
+
+        finedFiles(pathDir,list);
+        for (Path st : list){
+            String pDir = pathDir.toString()+ "\\" + st;
+            BufferedReader br = Files.newBufferedReader(Path.of(pDir));
+            while (br.ready()){
+                System.out.println(br.readLine());
+            }
+        }
+
+
+
     }
 
 
     //Находим все файлы в указанном каталоге
+
     public static void finedFiles(Path source, List<Path> list){
         File dir = new File(source.toString());
         File[] files = dir.listFiles();
+
         for (int i = 0; i < files.length; i++){
             if (files[i] != null && files[i].isFile()){ //проверяем, что ячейка массива файлов не пустая и является файлом
                 list.add(Path.of(files[i].getName())); // добавляем в список имена файлов из данного каталога
