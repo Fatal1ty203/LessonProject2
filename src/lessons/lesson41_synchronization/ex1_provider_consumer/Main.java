@@ -99,6 +99,8 @@ class Consumer extends Thread {
         }
         System.out.println("Поставищк стоп");
 
+
+
     }
 
 }
