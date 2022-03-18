@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         List<People> peopleList = new ArrayList<>();
 
         peopleList.add(new People("p1",5,true));
@@ -23,11 +23,16 @@ public class Main {
         lift1.start();
         lift2.start();
 
+        lift1.join();
+        lift2.join();
+        peopleList.stream()
+                .filter(val -> !val.button)
+                .forEach(pepl -> System.out.printf("%s забыл нажать кнопку\n", pepl.name));
+
+        peopleList.stream()
+                .filter(pipl -> pipl.floor == 1)
+                .forEach(pipl -> System.out.printf("%s уже был на первом этаже\n", pipl.name));
     }
-
-
-
-
 }
 
 class People {
