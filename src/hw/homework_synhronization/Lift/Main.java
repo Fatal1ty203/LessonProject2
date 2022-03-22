@@ -64,7 +64,6 @@ class Lift extends Thread{
         boolean finish = false;
 
         while (!finish){
-            System.out.println("Лифт на этаже " + floor);
             for (int i = 0; i < peopleList.size(); i++){
                 try {
                     Thread.sleep(1000);
@@ -80,7 +79,7 @@ class Lift extends Thread{
                     }
                 }
 
-                if (people!=null && people.floor != 1){
+                if (people!=null){
                     System.out.printf("Лифт №%d отвез на первый этаж пасажира %s\n", number, people.name);
 
                 }

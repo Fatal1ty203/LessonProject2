@@ -1,0 +1,39 @@
+<configuration>
+
+    <appender name="myConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender  name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>homework_Robots_synhronize\src\main\java\infoLogs\info</file>
+        <!--        append true значит, что новые логин будут добавляться в файл к старым-->
+        <append>true</append>
+        <!-- set immediateFlush to false for much higher logging throughput -->
+        <!--        immediateFlush true значит, что как только вызвана команда лога, лог сразу попадает в файл-->
+        <immediateFlush>true</immediateFlush>
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{dd.MM.yyyy HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--    Это мы создали отдельный конфиг лога в пакете robots,
+   при использовании которого логи будут писаться в консоль от уровня info-->
+    <logger level="debug" name="robots">
+        <appender-ref ref="myConsoleAppender" />
+    </logger>
+    <!--    Это мы создали отдельный конфиг лога в пакете task,
+     при использовании которого логи будут писаться в файл от уровня debug-->
+    <logger level="info" name="robots">
+        <appender-ref ref="FILE" />
+    </logger>
+
+    <root level="info">
+<!--        <appender-ref ref="FILE" />-->
+    </root>
+</configuration>
