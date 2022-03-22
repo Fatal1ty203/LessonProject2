@@ -1,3 +1,6 @@
 21.03.2022 14:09:05 [Thread-0] INFO  robots.MyController - Робор прошел прямо на 1 шагов, поток: Thread-0
 21.03.2022 14:09:08 [Thread-2] INFO  robots.MyController - Робор прошел вправо на 3 шагов, поток: Thread-2
 21.03.2022 14:09:10 [Thread-1] INFO  robots.MyController - Робор прошел влево на 2 шагов, поток: Thread-1
+22.03.2022 18:05:42 [Thread-0] INFO  robots.MyController - Робор прошел прямо на 1 шагов, поток: Thread-0
+22.03.2022 18:05:45 [Thread-2] INFO  robots.MyController - Робор прошел вправо на 3 шагов, поток: Thread-2
+22.03.2022 18:05:47 [Thread-1] INFO  robots.MyController - Робор прошел влево на 2 шагов, поток: Thread-1

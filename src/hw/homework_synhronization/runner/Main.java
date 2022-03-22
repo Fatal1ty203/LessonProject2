@@ -16,5 +16,10 @@ public class Main {
         ObstacleLane obl2 = new ObstacleLane(runners);
         obl.start();
         obl2.start();
+
+        //TODO: заглянуть в класс ObstacleLane
+
+
+
     }
 }
