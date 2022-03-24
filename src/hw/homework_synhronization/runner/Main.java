@@ -10,7 +10,7 @@ public class Main {
         Runner runner2 = new Runner("Бегун2", 1);
         List<Runner> runners = new ArrayList<>();
         runners.add(runner);
-        runners.add(runner2);
+//        runners.add(runner2);
 
         ObstacleLane obl = new ObstacleLane(runners);
         ObstacleLane obl2 = new ObstacleLane(runners);
