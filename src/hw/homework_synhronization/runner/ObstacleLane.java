@@ -1,7 +1,5 @@
 package hw.homework_synhronization.runner;
 
-import hw.homework_synhronization.RunnersNullPointerException;
-
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
