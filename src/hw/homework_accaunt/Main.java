@@ -3,18 +3,32 @@ package hw.homework_accaunt;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         List<Payment> paymentList = new ArrayList<>();
         String s = "log";
         Random rnd = new Random();
-        for (int i = 0; i< 10; i++){
-            String login = s+rnd.nextInt(5);
-            int sum = rnd.nextInt(20)+10;
-            paymentList.add(new Payment(login, sum));
-        }
-        paymentList.forEach(System.out::println);
+//        for (int i = 0; i< 10; i++){
+//            String login = s+rnd.nextInt(5);
+//            int sum = rnd.nextInt(20)+10;
+//            paymentList.add(new Payment(login, sum));
+//        }
+        //0 - начальное значение, типа i = 0
+        //i->i+1 - то, что будем делать с переменной i в конце типа каждого шага цикла (то есть увеличивать на +1)
+        //limit(10) - будет сделано 10 шагов цикла
+        //foreach - что делаем на каждом шаге цикла
+        Stream.iterate(0, i->i+1)
+                .limit(10)
+                .forEach(i->{
+                    String login = s+rnd.nextInt(5);
+                    int sum = rnd.nextInt(20)+10;
+                    paymentList.add(new Payment(login, sum));
+                });
+
+
+//        paymentList.forEach(System.out::println);
         PaymentAgregator paymentAgregator = new PaymentAgregator(paymentList);
         Map<String, Integer> result = paymentAgregator.spliterator();
         System.out.println("Result: ");
