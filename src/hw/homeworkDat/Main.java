@@ -86,68 +86,33 @@ class CulcClass implements Runnable{
                         .of(str.split(" ")))
                 .mapToDouble(Double::parseDouble)
                 .toArray();
+
         Arrays.stream(doubleList).forEach(System.out::println);
+
         boolean isExit = false;
+        String doubles = " ";
         while (!isExit){
+            for (int i = 0; i < doubleList.length; i++){
+                doubles += doubleList[i] + "; ";
+            }
             if (actionCode==1){
                 Double a = Arrays.stream(doubleList).sum();
-                action = "Производится сложение чисел, ответ: " + a +"\n" ;
+                System.out.print(doubles + "ТУТ");
+                action = "Производится сложение чисел:" + doubles + "ответ: " + a +"\n" ;
                 isExit= true;
             }else if (actionCode == 2){
                 double multi = Arrays.stream(doubleList)
                         .reduce(1,(a,b) -> a*b);
-                action = "Производится умножение чисел, ответ: " + multi +"\n";
+                action = "Производится умножение чисел:" + doubles + " ответ: " + multi +"\n";
                 isExit = true;
             } else if (actionCode == 3){
                 double sum2 = Arrays.stream(doubleList)
                         .reduce(1,(a,b) -> (a*2)+(b*2));
-                action = "Производится сложение квадратов, ответ: " + sum2 +"\n";
+                action = "Производится сложение квадратов:" + doubles + " ответ: " + sum2 +"\n";
                 System.out.println(sum2);
                 isExit = true;
             }
             Files.writeString(pathOut, action, StandardOpenOption.APPEND);
         }
-
-//    public static void readExample(Path path) throws IOException {
-//        System.out.println("Считаем строки в список");
-//        List<String> list = Files.readAllLines(path, Charset.forName("UTF8"));
-//        System.out.println(list);
-//        System.out.println("Считаем строки в строку");
-//        String s = Files.readString(path);
-//        System.out.println(s);
-//        System.out.println("Считаем с помощью readLine");
-//        BufferedReader br = Files.newBufferedReader(path);
-//
-//        while(br.ready()){
-//            System.out.println(br.readLine());
-//        }
-//    }
-
-//    public static void writeExample(Path path) throws IOException {
-//        System.out.println("Запишем в файл список строк");
-//        List<String> list = List.of("one", "two three", "four");
-//        Files.write(path, list);
-//        //Files.write(path, list, StandardCharsets.UTF_8); //Можно указать кодировку считываемого файла
-//        Files.write(path, list, Charset.forName("UTF8")); //Можно указать кодировку считываемого файла
-//
-//        System.out.println("Запишем в файл строку");
-//        Files.writeString(path, "hello world!");
-//
-//        System.out.println("Классика: записать в файл данные через BufferedWriter");
-//        BufferedWriter bw = Files.newBufferedWriter(path);
-//        bw.write("hello");
-//        bw.newLine();
-//        bw.write("world");
-//        bw.close();
-//
-//
-//        //Опции записи
-////        Files.writeString(path, "hello options", StandardOpenOption.APPEND); //append - позволяет дозаписать в файл новые данные
-//        //Files.writeString(path, "hello options", StandardOpenOption.WRITE); //write - перезаписывает старые данные на новые, ЕСЛИ ФАЙЛ СУЩЕСТВУЕТ
-////        Files.writeString(path, "hello options", StandardOpenOption.CREATE); //CREATE - создает файл, если нет или перезаписывает старые данные в существующем файле
-//        //Files.writeString(path, "hello options", StandardOpenOption.CREATE_NEW); //CREATE_NEW - создает файл, если еще его нет, иначе будет ошибка FIleAlreadyExists или перезаписывает старые данные
-////        Files.writeString(path, "hello options", StandardOpenOption.DELETE_ON_CLOSE); //DELETE_ON_CLOSE - удалит файл после использования
-//        Files.writeString(path, "hello options", StandardOpenOption.WRITE, StandardOpenOption.CREATE); //можно комбинировать
-//    }
     }
 }
