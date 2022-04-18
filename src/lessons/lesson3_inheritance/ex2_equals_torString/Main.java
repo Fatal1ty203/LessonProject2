@@ -1,28 +1,45 @@
 package lessons.lesson3_inheritance.ex2_equals_torString;
 
+import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 public class Main {
     public static void main(String[] args) {
 //        Реализуем equals и toString.
-        ColorRectangle colorRectangle = new ColorRectangle();
-        colorRectangle.a = 2;
-        colorRectangle.b = 3;
-        colorRectangle.color = "green";
-        System.out.println(colorRectangle);
+//        ColorRectangle colorRectangle = new ColorRectangle();
+//        colorRectangle.a = 2;
+//        colorRectangle.b = 3;
+//        colorRectangle.color = "green";
+//        System.out.println(colorRectangle);
+//
+//        System.out.println(colorRectangle.getSquare());
+//
+//        ColorVolumeRectangle colorVolumeRectangle = new ColorVolumeRectangle();
+//        colorVolumeRectangle.a = 5;
+//        colorVolumeRectangle.b = 7;
+//        colorVolumeRectangle.color = "red";
+//        colorVolumeRectangle.c = 80;
+//        System.out.println(colorVolumeRectangle);
+//        System.out.println(colorVolumeRectangle.getSquare());
 
-        System.out.println(colorRectangle.getSquare());
+        String s = "Привет";
+        String s2 = "hello";
 
-        ColorVolumeRectangle colorVolumeRectangle = new ColorVolumeRectangle();
-        colorVolumeRectangle.a = 5;
-        colorVolumeRectangle.b = 7;
-        colorVolumeRectangle.color = "red";
-        colorVolumeRectangle.c = 80;
-        System.out.println(colorVolumeRectangle);
-        System.out.println(colorVolumeRectangle.getSquare());
+        ///п р и в е т h e l l o
+
+        List<String> list = List.of(s, s2);
 
 
+//        List<String> result = dosome(list);
+//        System.out.println(result);
 
 
     }
+
+
 }
 
 class Rectangle{
