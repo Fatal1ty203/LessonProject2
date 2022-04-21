@@ -10,12 +10,14 @@
         <module name="Tic_Tac" />
         <module name="homework_Robots_synhronize" />
         <module name="homework_telephone_conversation" />
+        <module name="LessonProject2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="homework_Robots_synhronize" target="16" />
       <module name="homework_telephone_conversation" target="16" />
       <module name="lesson30_logs" target="16" />
+      <module name="LessonProject2" target="16" />
       <module name="Tic_Tac" target="16" />
       <module name="untitled" target="16" />
     </bytecodeTargetLevel>
