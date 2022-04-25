@@ -1,4 +1,4 @@
-package hw.homework_MYSQL_cinemaHall;
+package hw.homework_MYSQL_cinemaHall.oneTOone;
 
 import java.nio.file.Path;
 import java.sql.*;
@@ -29,8 +29,8 @@ public class Main {
         int action = 0;
         Scanner scn = new Scanner(System.in);
 
-
         try(Connection connection = DriverManager.getConnection(
+
                 "jdbc:mysql://localhost:3306/homework_kino","root","")){
             Statement stmt = connection.createStatement();
             ResultSet rst = null;
