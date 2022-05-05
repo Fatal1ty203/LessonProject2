@@ -5,9 +5,12 @@
       <module fileurl="file://$PROJECT_DIR$/LessonProject2.iml" filepath="$PROJECT_DIR$/LessonProject2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tic_Tac/Tic_Tac.iml" filepath="$PROJECT_DIR$/Tic_Tac/Tic_Tac.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework_Robots_synhronize/homework_Robots_synhronize.iml" filepath="$PROJECT_DIR$/homework_Robots_synhronize/homework_Robots_synhronize.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework_hibernate/homework_hibernate.iml" filepath="$PROJECT_DIR$/homework_hibernate/homework_hibernate.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework_telephone_conversation/homework_telephone_conversation.iml" filepath="$PROJECT_DIR$/homework_telephone_conversation/homework_telephone_conversation.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson30_logs/lesson30_logs.iml" filepath="$PROJECT_DIR$/lesson30_logs/lesson30_logs.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_hibernate/lesson_hibernate.iml" filepath="$PROJECT_DIR$/lesson_hibernate/lesson_hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_jpa/lesson_jpa.iml" filepath="$PROJECT_DIR$/lesson_jpa/lesson_jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson_jpa_relation/lesson_jpa_relation.iml" filepath="$PROJECT_DIR$/lesson_jpa_relation/lesson_jpa_relation.iml" />
     </modules>
   </component>
 </project>

@@ -24,15 +24,15 @@ public class Main {
 //        selectById(2);
 
 
-       //извлечь ноутбуки с названием acer1 и ценой < 150
-        //selectByNamePrice("acer1", 150);
+//       извлечь ноутбуки с названием acer1 и ценой < 150
+        selectByNamePrice("acer1", 150);
 
         //Увеличить стоимость ноутбука с Id 2 на 100 руб
         //updatePrice(2);
 
         //Удалить по id
-        deleteByid(3);
-        sessionFactory.close();
+//        deleteByid(3);
+//        sessionFactory.close();
 
     }
     static void deleteByid(int id){
