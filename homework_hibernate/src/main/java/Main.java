@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ForkJoinPool;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -27,7 +28,8 @@ public class Main {
 
 //        totalCalories("Второе");
 
-        allCalories();
+//        allCalories();
+        allCaloriesSQL();
 
     }
 
@@ -107,5 +109,16 @@ public class Main {
                 .getResultStream()
                 .collect(Collectors.toMap(val -> val.category, val2 -> val2.calories, Double::sum));
         map.forEach((x,y) -> System.out.println(x +" " + y));
+    }
+
+    static void allCaloriesSQL(){
+        List<Object[]> resultList = sessionFactory.openSession().createQuery("select category, SUM(calories) " +
+                "from Dish group by category").getResultList();
+        for (Object[] objects : resultList){
+            for (Object obj : objects){
+                System.out.print(obj + " ");
+            }
+            System.out.println();
+        }
     }
 }

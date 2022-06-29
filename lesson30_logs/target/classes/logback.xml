@@ -49,9 +49,9 @@
     <logger level="debug" name="ex1.Calculator">
         <appender-ref ref="FILE" />
     </logger>
-    <!--    Это мы создали отдельный конфиг лога в названием ex1.Main,
+    <!--    Это мы создали отдельный конфиг лога в названием ex1.ex1_one_to_one.Main,
      при использовании которого логи будут писаться в консоль от уровня info-->
-    <logger level="info" name="ex1.Main">
+    <logger level="info" name="ex1.ex1_one_to_one.Main">
         <appender-ref ref="myConsoleAppender" />
     </logger>
 

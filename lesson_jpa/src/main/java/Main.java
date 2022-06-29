@@ -101,7 +101,8 @@ public class Main {
     static void selectByNamePrice(String name, int price){
         EntityManager em = entityManagerFactory.createEntityManager();
 
-        TypedQuery<Laptop> query = em.createQuery("select l from Laptop l where l.name = :name and l.price < :price", Laptop.class);
+        TypedQuery<Laptop> query =
+                em.createQuery("select l from Laptop l where l.name = :name and l.price < :price", Laptop.class);
         query.setParameter("name", name);
         query.setParameter("price", price);
         List<Laptop> resultList = query.getResultList();

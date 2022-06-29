@@ -19,7 +19,7 @@ public class Passport {
     @NonNull private int number;
     @NonNull private int age;
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinColumn(name = "person_id") //создаем колонку - внений ключ с названием person_id
+    @JoinColumn(name = "person_id") //создаем колонку - внешний ключ с названием person_id
     private Person person;
 
 

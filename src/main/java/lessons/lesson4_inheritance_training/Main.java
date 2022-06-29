@@ -81,8 +81,10 @@ class Otversie{
     }
 
 }
+interface Test{
 
-class Figura{
+}
+class Figura implements Test{
 
     public int getLength() {
         return 0;

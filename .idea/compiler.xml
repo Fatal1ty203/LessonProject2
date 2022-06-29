@@ -11,21 +11,29 @@
         <module name="lesson30_logs" />
         <module name="Tic_Tac" />
         <module name="homework_hibernate" />
+        <module name="homework_JPA1" />
         <module name="lesson_hibernate" />
         <module name="lesson_jpa_relation" />
         <module name="homework_Robots_synhronize" />
         <module name="homework_telephone_conversation" />
+        <module name="lesson_json1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="hm_film" target="16" />
       <module name="homework_hibernate" target="16" />
+      <module name="homework_JPA" target="16" />
+      <module name="homework_JPA1" target="16" />
       <module name="homework_Robots_synhronize" target="16" />
       <module name="homework_telephone_conversation" target="16" />
       <module name="lesson30_logs" target="16" />
       <module name="lesson_hibernate" target="16" />
       <module name="lesson_jpa" target="16" />
+      <module name="lesson_jpa (1)" target="16" />
       <module name="lesson_jpa_relation" target="16" />
       <module name="lesson_jpa_relationship" target="16" />
+      <module name="lesson_json1" target="16" />
+      <module name="lesson_spring" target="16" />
       <module name="LessonProject2" target="16" />
       <module name="Tic_Tac" target="16" />
       <module name="untitled" target="16" />

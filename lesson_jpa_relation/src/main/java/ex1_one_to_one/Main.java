@@ -32,8 +32,8 @@ public class Main {
         entityManager.getTransaction().commit();
 
         //вариант через merge
-//        ex1_one_to_one.Car car1 = new ex1_one_to_one.Car("lada", 250, 1000);
-//        car1.setPerson(new ex1_one_to_one.Person(1, "ivan123", "ivanov"));
+//        Car car1 = new Car("lada", 250, 1000);
+//        car1.setPerson(Owner(1, "ivan123", "ivanov"));
 //
 //        entityManager.getTransaction().begin();
 //        entityManager.merge(car1); //делаем через merge так как внутри car1 находится неуправляемый объект person
